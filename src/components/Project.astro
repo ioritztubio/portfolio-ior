@@ -1,0 +1,64 @@
+---
+import NextJS from "./icons/NodeJS.astro"
+import React from "./icons/React.astro"
+import Docker from "./icons/Docker.astro"
+const TAGS = {
+    NODE: {
+        name: "Node.js",
+        class: "bg-green-900 text-white",
+        icon: NextJS,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-blue-900 text-white",
+        icon: React,
+    },
+
+    DOCKER: {
+        name: "Docker",
+        class: "bg-blue-900 text-white ",
+        icon: Docker,
+    }
+};
+
+const PROJECTS = [
+    {
+        title: "IMI - Who are ya?",
+        description:
+            "Una aplicación web que te permite jugar contra un LLM (groq) para adivinar qué jugador de la NBA es el que se ha elegido de manera aleatoria.",
+        image: "/projects/nba_project.webp",
+        link: "https://www.google.com",
+        github: "https://www.github.com/ioritztubio",
+        tags: [TAGS.NODE, TAGS.REACT, TAGS.DOCKER],
+    },
+];
+---
+
+{
+    PROJECTS.map((project) => (
+        <article class="project">
+            <h3 class="text-xl font-semibold text-purple-400  mb-2">
+                {project.title}
+            </h3>
+            <p class="text-lg mb-4 text-pretty">{project.description}</p>
+            <ul class="flex gap-x-4 flex-row mb-5">
+                {project.tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-1 rounded-full text-xs ${tag.class} py-1 px-2 items-center `}>
+                        <tag.icon class="size-5"/>
+                        {tag.name}
+                    </span>
+                    </li>
+                    
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={project.image}
+                alt={`Captura de pantalla del proyecto ${project.title} `}
+            />
+            <a href={project.link}>View project</a>
+            <a href={project.github} />
+        </article>
+    ))
+}

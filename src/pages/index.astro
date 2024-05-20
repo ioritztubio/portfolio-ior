@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import GitHub from "../components/icons/GitHub.astro";
@@ -8,14 +7,17 @@ import Mail from "../components/icons/Mail.astro";
 import AccessPill from "../components/AccessPill.astro";
 import Experience from "../components/Experience.astro";
 import Section from "../components/Section.astro";
+import Project from "../components/Project.astro";
 ---
 
-<Layout title="Portfolio de Ioritz Tubio - Desarrollador y Programador Web Estudiante Ingeniero Informatico"
- description="Contrata a Ioritz Tubio para realizar prácticas universitarias.">
+<Layout
+	title="Portfolio de Ioritz Tubio - Desarrollador y Programador Web Estudiante Ingeniero Informatico"
+	description="Contrata a Ioritz Tubio para realizar prácticas universitarias."
+>
 	<main class="px-4">
 		<Section class="py-44 pb-28">
 			<h1
-				class="text-white font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 sm:text-3xl text-2xl md:text-4xl  "
+				class="text-white font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 sm:text-3xl text-2xl md:text-4xl"
 			>
 				Hola, soy Ioritz Tubío
 				<a
@@ -45,10 +47,7 @@ import Section from "../components/Section.astro";
 					<GitHub class="size-5 lg:size-6" />
 					GitHub
 				</AccessPill>
-				<AccessPill
-					id="mail-pill"
-					data-email="tu-correo@ejemplo.com"
-					href=""
+				<AccessPill href="mailto:ioritztubio1@gmail.com"
 				>
 					<Mail class="size-5 lg:size-6" />
 					ioritztubio1@gmail.com
@@ -57,8 +56,38 @@ import Section from "../components/Section.astro";
 		</Section>
 
 		<Section id="experiencia">
-			<h2 class="text-3xl font-semibold pb-10 mb-4">Experiencia laboral</h2>
+			<h2 class="text-3xl font-semibold pb-10">Experiencia laboral</h2>
 			<Experience />
 		</Section>
+
+		<Section id="proyectos" class="pt-20">
+			<h2 class="text-3xl font-semibold pb-8">Proyectos</h2>
+			<Project />
+		</Section>
+
+		<Section id="sobremi" class="pt-20">
+			<h2 class="text-3xl font-semibold pb-8">Sobre mí</h2>
+			<p class="opacity-80 text-justify">
+				Soy una persona sumamente <span class="text-green-300"
+					>social y adaptable</span
+				>, capaz de
+				<span class="text-purple-300">integrarse fácilmente </span>en
+				cualquier entorno. Mi actitud hacia el trabajo es siempre
+				positiva y enérgica, lo que me permite abordar los desafíos con <span
+					class="text-yellow-200">determinación y perseverancia</span
+				>. Mi mayor pasión radica en el aprendizaje continuo; disfruto
+				explorar nuevos conocimientos y habilidades, lo que me impulsa
+				constantemente a mejorar y crecer tanto a nivel personal como
+				profesional. Considero que mi <span class="text-orange-300"
+					>capacidad para relacionarme</span
+				> y mi
+				<span class="text-blue-300">compromiso con el desarrollo</span> constante
+				son activos fundamentales en cualquier equipo o proyecto en el que
+				participe.
+			</p>
+		</Section>
+
+		
+
 	</main></Layout
 >
