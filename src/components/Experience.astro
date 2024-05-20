@@ -1,0 +1,39 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+    {
+        date: 'Actualmente...',
+        title: 'Estudiante de Ingeniería Informática',
+        description: 'Estudio en la UPV/EHU de Donostia-San Sebastián. Ahora mismo me encuentro terminando el tercer año de carrera.',
+        link: '#'
+    },
+    {
+        date: 'Actualmente...',
+        title: 'Estudiante de Ingeniería Informática',
+        description: 'Estudio en la UPV/EHU de Donostia-San Sebastián. Ahora mismo me encuentro terminando el tercer año de carrera.',
+        link: '#'
+    },
+    {
+        date: 'Actualmente...',
+        title: 'Estudiante de Ingeniería Informática',
+        description: 'Estudio en la UPV/EHU de Donostia-San Sebastián. Ahora mismo me encuentro terminando el tercer año de carrera.',
+        link: '#'
+    }
+]
+
+---
+
+
+<ol class="relative border-s border-gray-200 dark:border-yellow-700 ml-2">       
+    {
+        EXPERIENCE.map( (experience) => (
+            <li class="mb-10 ms-4"> 
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+                
+    }
+    
+   
+</ol>
+

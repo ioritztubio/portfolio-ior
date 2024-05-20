@@ -2,21 +2,63 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
+import LinkedIn from "../components/icons/LinkedIn.astro";
+import GitHub from "../components/icons/GitHub.astro";
+import Mail from "../components/icons/Mail.astro";
+import AccessPill from "../components/AccessPill.astro";
+import Experience from "../components/Experience.astro";
+import Section from "../components/Section.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-			<h1 class="text-white text-5xl font-bold flex justify-center flex-row">
-				Hey, soy Ioritz Tubío 
-				<div class="flex justify-center items-center">
-					<Badge>Con ganas de trabajar</Badge>
-				</div>
+<Layout title="Portfolio de Ioritz Tubio - Desarrollador y Programador Web Estudiante Ingeniero Informatico"
+ description="Contrata a Ioritz Tubio para realizar prácticas universitarias.">
+	<main class="px-4">
+		<Section class="py-44 pb-28">
+			<h1
+				class="text-white font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 sm:text-3xl text-2xl md:text-4xl  "
+			>
+				Hola, soy Ioritz Tubío
+				<a
+					href="https://www.linkedin.com/in/ioritz-tubio-sanchez-0aa18a2b2/"
+					target="_blank"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
 			</h1>
-			<h2>
-				Estudiante en Ingeniería Informática en la Universidad del País
-				Vasco (UPV/EHU). De Donostia-San Sebastián, España
+			<h2 class="text-xl lg:text-2xl text-wrap opacity-80 max-w-[700px]">
+				Estudiante en <span class="text-yellow-200"
+					>Ingeniería Informática</span
+				> en la Universidad del País Vasco (UPV/EHU). De <span
+					class="text-purple-300">Donostia-San Sebastián</span
+				>, España.
 			</h2>
-		</section>
+
+			<nav class="flex gap-4 mt-10 flex-wrap">
+				<AccessPill
+					href="https://www.linkedin.com/in/ioritz-tubio-sanchez-0aa18a2b2/"
+				>
+					<LinkedIn class="size-5 lg:size-6" />
+					LinkedIn
+				</AccessPill>
+				<AccessPill href="https://github.com/ioritztubio">
+					<GitHub class="size-5 lg:size-6" />
+					GitHub
+				</AccessPill>
+				<AccessPill
+					id="mail-pill"
+					data-email="tu-correo@ejemplo.com"
+					href=""
+				>
+					<Mail class="size-5 lg:size-6" />
+					ioritztubio1@gmail.com
+				</AccessPill>
+			</nav>
+		</Section>
+
+		<Section id="experiencia">
+			<h2 class="text-3xl font-semibold pb-10 mb-4">Experiencia laboral</h2>
+			<Experience />
+		</Section>
 	</main></Layout
 >
