@@ -25,7 +25,7 @@ const PROJECTS = [
     {
         title: "IMI - Who are ya?",
         description:
-            "Una aplicación web que te permite jugar contra un LLM (groq) para adivinar qué jugador de la NBA es el que se ha elegido de manera aleatoria.",
+            "Una aplicación web que te permite jugar contra diferentes LLM (Large Language Model / Modelo de Lenguaje Grande) de groq, para adivinar qué jugador de la NBA es el que se ha elegido de manera aleatoria.",
         image: "/projects/nba_project.webp",
         link: "https://github.com/ioritztubio/IMI_NBA",
         github: "https://www.github.com/ioritztubio",
@@ -41,7 +41,7 @@ const PROJECTS = [
                 {project.title}
             </h3>
             <p class="text-lg mb-4 text-pretty">{project.description}</p>
-            <ul class="flex gap-x-3 flex-row mb-5">
+            <ul class="flex gap-x-3 flex-row mb-10">
                 {project.tags.map((tag) => (
                     <li>
                         <span class={`flex gap-x-1 rounded-full text-xs ${tag.class} py-1 px-2 items-center `}>

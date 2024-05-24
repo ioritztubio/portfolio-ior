@@ -14,7 +14,7 @@ import Project from "../components/Project.astro";
 	title="Portfolio de Ioritz Tubio - Desarrollador y Programador Web Estudiante Ingeniero Informatico"
 	description="Contrata a Ioritz Tubio para realizar prácticas universitarias."
 >
-	<main class="px-4">
+	<main class="px-4" >
 		<Section class="py-44 pb-28">
 			<h1
 				class="text-white font-bold flex flex-row gap-x-4 pb-6 lg:pb-10 sm:text-3xl text-2xl md:text-4xl"
@@ -28,7 +28,7 @@ import Project from "../components/Project.astro";
 					<Badge>Disponible para trabajar</Badge>
 				</a>
 			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap opacity-80 max-w-[700px]">
+			<h2 class="text-xl lg:text-2xl text-wrap opacity-90 max-w-[700px]">
 				Estudiante en <span class="text-yellow-200"
 					>Ingeniería Informática</span
 				> en la Universidad del País Vasco (UPV/EHU). De <span
@@ -67,24 +67,49 @@ import Project from "../components/Project.astro";
 
 		<Section id="sobremi" >
 			<h2 class="text-3xl font-semibold pb-8">Sobre mí</h2>
-			<p class="opacity-80 text-justify">
-				Soy una persona sumamente <span class="text-green-300"
+			<p class="opacity-85 text-pretty">
+				Soy una persona sumamente <span class="text-green-200"
 					>social y adaptable</span
 				>, capaz de
 				<span class="text-purple-300">integrarse fácilmente </span>en
 				cualquier entorno. Mi actitud hacia el trabajo es siempre
 				positiva y enérgica, lo que me permite abordar los desafíos con <span
-					class="text-yellow-200">determinación y perseverancia</span
-				>. Mi mayor pasión radica en el aprendizaje continuo; disfruto
+					class="text-yellow-200 ">determinación y perseverancia</span
+				>. </p>
+				<br/>
+				
+				<p class="opacity-85 text-pretty">Mi mayor pasión radica en el aprendizaje continuo; disfruto
 				explorar nuevos conocimientos y habilidades, lo que me impulsa
 				constantemente a mejorar y crecer tanto a nivel personal como
-				profesional. Considero que mi <span class="text-orange-300"
+				profesional. Considero que mi <span class="text-orange-200"
 					>capacidad para relacionarme</span
 				> y mi
 				<span class="text-blue-300">compromiso con el desarrollo</span> constante
 				son activos fundamentales en cualquier equipo o proyecto en el que
 				participe.
 			</p>
+		</Section>
+
+		<Section id="contacto" >
+			<h2 class="text-3xl font-semibold pb-8">Contacto</h2>
+			<p class="opacity-85 text-pretty">
+				¿Quieres empezar un proyecto juntos?
+				¡No dudes en ponerte en contacto conmigo!
+			</p>
+			<nav class="flex gap-4 mt-10 flex-wrap">
+				<AccessPill
+					href="https://www.linkedin.com/in/ioritz-tubio-sanchez-0aa18a2b2/"
+				>
+					<LinkedIn class="size-5 lg:size-6" />
+					LinkedIn
+				</AccessPill>
+				<AccessPill href="mailto:ioritztubio1@gmail.com">
+					<Mail class="size-5 lg:size-6" />
+						ioritztubio1@gmail.com
+					
+
+				</AccessPill>
+			</nav>
 		</Section>
 
 		
